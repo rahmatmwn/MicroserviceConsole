@@ -1,0 +1,16 @@
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\MicroService.exe.config
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\MicroService.exe
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\MicroService.pdb
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\EntityFramework.dll
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\Microservice.BussinessLogic.exe
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\Microservice.Common.exe
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\Microservice.DataAccess.exe
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\Microservice.BussinessLogic.pdb
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\Microservice.Common.pdb
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\Microservice.DataAccess.pdb
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\EntityFramework.xml
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\obj\Debug\MicroService.csprojResolveAssemblyReference.cache
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\obj\Debug\MicroService.exe
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\obj\Debug\MicroService.pdb

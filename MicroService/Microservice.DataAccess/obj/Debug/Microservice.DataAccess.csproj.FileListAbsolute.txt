@@ -1,0 +1,10 @@
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\bin\Debug\Microservice.DataAccess.exe.config
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\bin\Debug\Microservice.DataAccess.exe
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\bin\Debug\Microservice.DataAccess.pdb
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\bin\Debug\EntityFramework.dll
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\bin\Debug\EntityFramework.xml
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\obj\Debug\Microservice.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\obj\Debug\Microservice.DataAccess.exe
+c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\Microservice.DataAccess\obj\Debug\Microservice.DataAccess.pdb
