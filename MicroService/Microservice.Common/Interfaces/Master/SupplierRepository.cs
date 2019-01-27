@@ -42,8 +42,8 @@ namespace Microservice.Common.Interfaces.Master
 
         public Suppliers Get(int? id)
         {
-            //return _contex.Suppliers.Where(x=>x.Id == id).SingleOrDefault();
-            return _contex.Suppliers.Find(id);
+            return _contex.Suppliers.Where(x=>x.Id == id && x.IsDelete==false).SingleOrDefault();
+            //return _contex.Suppliers.Find(id);
         }
 
         public bool Insert(SupplierParam supplierParam)

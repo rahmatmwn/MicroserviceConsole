@@ -49,7 +49,9 @@ namespace MicroService.Controller
                 case '4':
                     foreach(var tampilin in _supplierService.Get())
                     {
-                        Console.WriteLine(supplierParam.name);
+                        Console.WriteLine("Name          : " + tampilin.Name);
+                        Console.WriteLine("Join Date     : " + tampilin.JoinDate);
+                        Console.Read();
                     }
                     break;
             }

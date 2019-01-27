@@ -14,3 +14,6 @@ c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroServi
 c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\obj\Debug\MicroService.csprojResolveAssemblyReference.cache
 c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\obj\Debug\MicroService.exe
 c:\users\rahmatmwn\documents\visual studio 2015\Projects\MicroService\MicroService\obj\Debug\MicroService.pdb
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\MicroserviceConsole\MicroService\MicroService\bin\Debug\MicroService.exe.config
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\MicroserviceConsole\MicroService\MicroService\obj\Debug\MicroService.exe
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\MicroserviceConsole\MicroService\MicroService\obj\Debug\MicroService.pdb

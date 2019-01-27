@@ -14,7 +14,7 @@ namespace Microservice.BussinessLogic.Services.Master
     {
         ISupplierRepository _supplierRepository = new SupplierRepository();
         MyContext _contex = new MyContext();
-        
+        bool status = false;
         public bool Delete(int? id)
         {
             var getid = Get(id);
@@ -22,8 +22,9 @@ namespace Microservice.BussinessLogic.Services.Master
             if (getid != null)
             {
                 getsupplier = _supplierRepository.Delete(id);
+                status = true;
             }
-            return getsupplier;
+            return status;
             
         }
 
@@ -37,11 +38,13 @@ namespace Microservice.BussinessLogic.Services.Master
             if (id==null)
             {
                 Console.WriteLine("Id Not Found in Application");
+                Console.Read();
             }
             var getsupplier = _supplierRepository.Get(id);
             if (getsupplier == null)
             {
                 Console.WriteLine("Id Not Found in Database");
+                Console.Read();
             }
             return getsupplier;
         }
@@ -51,9 +54,15 @@ namespace Microservice.BussinessLogic.Services.Master
             //belum fix
             if (String.IsNullOrWhiteSpace(supplierParam.name)==true)
             {
-                Console.WriteLine("Nama jangan kosong");
+                Console.WriteLine("Name don't Empty");
+                Console.Read();
             }
-            return _supplierRepository.Insert(supplierParam);
+            else
+            {
+                _supplierRepository.Insert(supplierParam);
+                status = true;
+            }
+            return status;
 
 
         }
@@ -65,7 +74,17 @@ namespace Microservice.BussinessLogic.Services.Master
             {
                 Console.WriteLine("Nama jangan kosong");
             }
-            return _supplierRepository.Update(id,supplierParam);
+            var getsupplier = _supplierRepository.Get(id);
+            if (getsupplier == null)
+            {
+                Console.WriteLine("Id Not Found in Database");
+            }
+            else
+            {
+                _supplierRepository.Update(id, supplierParam);
+                status = true;
+            }
+            return status;
         }
     }
 }
