@@ -17,20 +17,15 @@ namespace Microservice.Common.Interfaces.Master
         {
             var result = 0;
             var supplier = Get(id);
-            try
-            {
                 supplier.IsDelete = true;
                 supplier.DeleteDate = DateTimeOffset.Now.LocalDateTime;
                 result = _contex.SaveChanges();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
             
             if (result > 0)
             {
-               status=true;
+                status=true;
+                Console.WriteLine("Delete Successfully");
+                Console.Read();
             }
             return status;
         }
@@ -49,8 +44,8 @@ namespace Microservice.Common.Interfaces.Master
         public bool Insert(SupplierParam supplierParam)
         {
             var result = 0;
-            
             supplier.Name = supplierParam.name;
+            supplier.JoinDate = DateTimeOffset.Now.LocalDateTime;
             supplier.CreateDate = DateTimeOffset.Now.LocalDateTime;
             _contex.Suppliers.Add(supplier);
             result = _contex.SaveChanges();
@@ -58,6 +53,8 @@ namespace Microservice.Common.Interfaces.Master
             if (result >0)
             {
                 status= true;
+                Console.WriteLine("Insert Successfully");
+                Console.Read();
             }
             return status;
 
@@ -73,6 +70,8 @@ namespace Microservice.Common.Interfaces.Master
             if (result > 0)
             {
                 status= true;
+                Console.WriteLine("Update Successfully");
+                Console.Read();
             }
             return status;
         }

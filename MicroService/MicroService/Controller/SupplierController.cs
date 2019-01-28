@@ -17,7 +17,7 @@ namespace MicroService.Controller
         {
             
             char pilihan;
-            int? id;
+            int result;
             Console.WriteLine("============== Supplier Data =============");
             Console.WriteLine("1. Insert");
             Console.WriteLine("2. Update");
@@ -31,20 +31,39 @@ namespace MicroService.Controller
             {
                 case '1':
                     Console.Write("Insert Name of Supplier : ");
-                    supplierParam.name = Console.ReadLine();
+                     supplierParam.name = Console.ReadLine();
                     _supplierService.Insert(supplierParam);
                     break;
                 case '2':
                     Console.Write("Insert Id of Supplier : ");
-                    id = Convert.ToInt16(Console.ReadLine());
-                    Console.Write("Insert Name of Supplier : ");
-                    supplierParam.name = Console.ReadLine();
-                    _supplierService.Update(id, supplierParam);
+                    if (String.IsNullOrWhiteSpace(Console.ReadLine()) == true)
+                    {
+                        Console.WriteLine("Id With not Valid Value");
+                        Console.Read();
+                    }
+                    else
+                    {
+                        supplierParam.Id = Convert.ToInt16(Console.ReadLine());
+                        Console.Write("Insert Name of Supplier : ");
+                        supplierParam.name = Console.ReadLine();
+                        _supplierService.Update(supplierParam.Id, supplierParam);
+                    }
+                    
+                    
                     break;
                 case '3':
                     Console.Write("Insert Id of Supplier : ");
-                    id = Convert.ToInt16(Console.ReadLine());
-                    _supplierService.Delete(id);
+                    if (String.IsNullOrWhiteSpace(Console.ReadLine()) == true)
+                    {
+                        Console.WriteLine("Id With not Valid Value");
+                        Console.Read();
+                    }
+                    else
+                    {
+                        supplierParam.Id = Convert.ToInt16(Console.ReadLine());
+                        _supplierService.Delete(supplierParam.Id);
+                    }
+                    
                     break;
                 case '4':
                     foreach(var tampilin in _supplierService.Get())

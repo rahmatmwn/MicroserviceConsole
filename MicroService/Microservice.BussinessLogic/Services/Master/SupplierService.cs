@@ -11,18 +11,29 @@ using Microservice.Common.Interfaces.Master;
 namespace Microservice.BussinessLogic.Services.Master
 {
     public class SupplierService : ISupplierService
-    {
+    { 
         ISupplierRepository _supplierRepository = new SupplierRepository();
         MyContext _contex = new MyContext();
         bool status = false;
         public bool Delete(int? id)
         {
-            var getid = Get(id);
-            var getsupplier=false;
-            if (getid != null)
+            if (String.IsNullOrWhiteSpace(id.ToString()) == true)
             {
-                getsupplier = _supplierRepository.Delete(id);
-                status = true;
+                Console.WriteLine("Please Insert Id Correctly");
+            }
+            else
+            {
+                var getsupplier = _supplierRepository.Get(id);
+                if (getsupplier == null)
+                {
+                    Console.WriteLine("Id Not Found in Database");
+                    Console.Read();
+                }
+                else
+                {
+                    status = _supplierRepository.Delete(id);
+                }
+                
             }
             return status;
             
@@ -34,19 +45,8 @@ namespace Microservice.BussinessLogic.Services.Master
         }
 
         public Suppliers Get(int? id)
-        {
-            if (id==null)
-            {
-                Console.WriteLine("Id Not Found in Application");
-                Console.Read();
-            }
-            var getsupplier = _supplierRepository.Get(id);
-            if (getsupplier == null)
-            {
-                Console.WriteLine("Id Not Found in Database");
-                Console.Read();
-            }
-            return getsupplier;
+        {           
+            return _supplierRepository.Get(id);
         }
 
         public bool Insert(SupplierParam supplierParam)
@@ -70,20 +70,33 @@ namespace Microservice.BussinessLogic.Services.Master
         public bool Update(int? id, SupplierParam supplierParam)
         {
             //belum fix
-            if (String.IsNullOrWhiteSpace(supplierParam.name) == true)
+            if (String.IsNullOrWhiteSpace(id.ToString()))
             {
-                Console.WriteLine("Nama jangan kosong");
-            }
-            var getsupplier = _supplierRepository.Get(id);
-            if (getsupplier == null)
-            {
-                Console.WriteLine("Id Not Found in Database");
+                Console.WriteLine("Please Input ID Correctly");
+                
             }
             else
             {
-                _supplierRepository.Update(id, supplierParam);
-                status = true;
+                var getsupplier = _supplierRepository.Get(id);
+                if (getsupplier == null)
+                {
+                    Console.WriteLine("Id Not Found in Database");
+                    Console.Read();
+                }
+                else
+                {
+                    if (String.IsNullOrWhiteSpace(supplierParam.name) == true)
+                    {
+                        Console.WriteLine("Name Don't Empty");
+                    }
+                    else
+                    {
+                        _supplierRepository.Update(id, supplierParam);
+                        status = true;
+                    }
+                }
             }
+            
             return status;
         }
     }
